@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import JsxExample from "./components/jsxEg/Example1"
+import PersistentDrawerLeft from "./components/drower/MuiDrower";
+// import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Example1 from "./components/jsxEg/Example1";
+import History from "./components/history/History";
+import PropsEg from "./components/props/PropsEg";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <PersistentDrawerLeft />
+        <Routes>
+          <Route path="/example1" element={<Example1 />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/props" element={<PropsEg />} />
+          {/* <Route path="/react-list" element={<ReactListPage />} /> */}
+          {/* <Route path="/react-event" element={<ReactEventPage />} /> */}
+          {/* <Route path="/dom-vdom" element={<DomVdomPage />} /> */}
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
