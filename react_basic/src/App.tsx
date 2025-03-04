@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Example1 from "./components/jsxEg/Example1";
 import History from "./components/history/History";
 import PropsEg from "./components/props/PropsEg";
+import ReactListPage from  "./components/list/ReactListPage";
+import ReactEventPage from "./components/events/ReactEventPage";
 
 function App() {
   return (
@@ -15,8 +17,8 @@ function App() {
           <Route path="/example1" element={<Example1 />} />
           <Route path="/history" element={<History />} />
           <Route path="/props" element={<PropsEg />} />
-          {/* <Route path="/react-list" element={<ReactListPage />} /> */}
-          {/* <Route path="/react-event" element={<ReactEventPage />} /> */}
+          <Route path="/react-list" element={<ReactListPage />} />
+          <Route path="/react-event" element={<ReactEventPage />} />
           {/* <Route path="/dom-vdom" element={<DomVdomPage />} /> */}
         </Routes>
       </BrowserRouter>
