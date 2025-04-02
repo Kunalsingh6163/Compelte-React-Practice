@@ -10,6 +10,7 @@ export default function Home() {
         <h1> the second otp varification project with outer Nodejs</h1>
         <OtpVerification />
       </div>
+      
     </div>
   );
 }
