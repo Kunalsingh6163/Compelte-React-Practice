@@ -29,7 +29,7 @@ function Contact() {
               <th className="border border-gray-300 p-2">Id</th>
               <th className="border border-gray-300 p-2">Name</th>
               <th className="border border-gray-300 p-2">Email</th>
-              <th className="border border-gray-300 p-2">Phone</th>
+              <th className="border border-gray-300 p-2">Phone</th> 
             </tr>
           </thead>
           <tbody className="items-center justify-center text-2xl">

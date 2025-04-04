@@ -9,22 +9,17 @@ import {
   RouterProvider,
 } from "react-router";
 import Layout from "./Layout.tsx";
-import UserListTable from "./components/userList/UserListTable.tsx";
-import Contact from "./components/contact/Contact.tsx";
-import MockData from "./components/show-mock-data/MockData.tsx";
-import MockUserData from "./components/show-mock-data/MockUserData.tsx"
-import ShowDataMemoization from "./components/showData_useMemo/ShowDataMemo.tsx"
+import UserDataContext from "./components/userData/UserData.tsx"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      {/* <Route path='' element={<Home />} /> */}
-      <Route path="userList" element={<UserListTable />} />
+      <Route path='api-context' element={<UserDataContext />} />
+      {/* <Route path="userList" element={<UserListTable />} />
       <Route path="contact" element={<Contact />} />
       <Route path="mockdata" element={<MockData />} />
       <Route path="testmock" element={<MockUserData />} />
       <Route path="useMemo-user" element={<ShowDataMemoization />} />
-      {/* 
       <Route path='user/:userid' element={<User />} />
       <Route 
       loader={githubInfoLoader}
