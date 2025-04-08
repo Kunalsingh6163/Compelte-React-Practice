@@ -9,14 +9,15 @@ import {
   RouterProvider,
 } from "react-router";
 import Layout from "./Layout.tsx";
-import UserDataContext from "./components/userData/UserData.tsx"
+import UserDataContext from "./components/userData/UserData.tsx";
+import ContentList from "./components/arrayData/ContentList.tsx"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path='api-context' element={<UserDataContext />} />
-      {/* <Route path="userList" element={<UserListTable />} />
-      <Route path="contact" element={<Contact />} />
+      <Route path="content-list" element={<ContentList />} />
+      {/* <Route path="contact" element={<Contact />} />
       <Route path="mockdata" element={<MockData />} />
       <Route path="testmock" element={<MockUserData />} />
       <Route path="useMemo-user" element={<ShowDataMemoization />} />

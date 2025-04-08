@@ -6,7 +6,9 @@ function Contact() {
   if (loading) {
     return <p className="text-center text-lg font-bold">Loading...</p>;
   }
-
+  const handleUserinfo = () =>{
+    console.log(users);
+  }
   return (
     <div className="p-4">
       <h3 className="text-2xl font-bold mb-4">Get in touch</h3>
@@ -20,6 +22,7 @@ function Contact() {
               <th className="border border-gray-300 p-2">Name</th>
               <th className="border border-gray-300 p-2">Email</th>
               <th className="border border-gray-300 p-2">Phone</th>
+              <th className="border border-gray-300 p-2">Actions</th>
             </tr>
           </thead>
           <tbody className="items-center justify-center text-lg">
@@ -29,6 +32,7 @@ function Contact() {
                 <td className="border border-gray-300 p-2">{user.name}</td>
                 <td className="border border-gray-300 p-2">{user.email}</td>
                 <td className="border border-gray-300 p-2">{user.phone}</td>
+                <td className="border border-gray-300 p-2"><button onClick={handleUserinfo}>userInfo</button></td>
               </tr>
             ))}
           </tbody>

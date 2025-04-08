@@ -7,6 +7,7 @@ import History from "./components/history/History";
 import PropsEg from "./components/props/PropsEg";
 import ReactListPage from  "./components/list/ReactListPage";
 import ReactEventPage from "./components/events/ReactEventPage";
+import SelectCountry from "./components/select_country/SelectCountry"
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Route path="/props" element={<PropsEg />} />
           <Route path="/react-list" element={<ReactListPage />} />
           <Route path="/react-event" element={<ReactEventPage />} />
-          {/* <Route path="/dom-vdom" element={<DomVdomPage />} /> */}
+          <Route path="/country-select" element={<SelectCountry />} />
         </Routes>
       </BrowserRouter>
     </>
