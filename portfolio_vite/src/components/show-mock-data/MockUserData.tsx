@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 
 function MockUserData() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [userData, setUserData] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch(`/public/MOCK_DATA.json`)
+    fetch(`/MOCK_DATA.json`)
       .then((response) => response.json())
       .then((data) => {
         setUserData(data);
+        setLoading(false);
       })
       .catch((error) => {
         console.error(`Hi this is error:- `, error);
