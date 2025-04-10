@@ -1,0 +1,7 @@
+1. Waht is Props ?
+Answer. Props in React are short for "properties." They are a mechanism for passing data from a parent component to a child component. 
+Props are immutable, meaning the child component cannot modify the props it receives. This ensures a unidirectional 
+data flow in React, which helps maintain predictable behavior.
+
+Key Defination:-
+Props are a way to send data and event handlers to child components, enabling the creation of dynamic and reusable components.
