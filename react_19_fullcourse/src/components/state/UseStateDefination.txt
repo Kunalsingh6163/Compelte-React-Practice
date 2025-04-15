@@ -1,0 +1,17 @@
+In React, `useState` is a Hook that allows you to add state management to functional components. State is used to store and 
+manage data that can change over time, like user inputs, form fields, or UI toggles. `useState` provides you with a 
+pair: the current state value and a function to update that state.
+
+Here's how `useState` works:
+- **Initialization**: It takes the initial state as an argument and returns an array containing two values: the current state 
+    and a function to update it.
+- **Reactivity**: When the state is updated using the provided function, the component re-renders to reflect the new state.
+
+
+```
+### Explanation
+- **Initial State**: `useState(0)` initializes the `count` state with `0`.
+- **State Update**: When the "Increment" button is clicked, the `increment` 
+    function is called, updating the state using `setCount(count + 1)`.
+- **Re-rendering**: The component re-renders, displaying the updated count.
+
