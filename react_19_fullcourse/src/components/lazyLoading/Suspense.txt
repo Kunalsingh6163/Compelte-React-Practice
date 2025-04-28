@@ -1,0 +1,36 @@
+What’s Happening Here?
+<Suspense> is a special React component provided by React itself.
+
+Inside <Suspense>, we place a lazily loaded component — here it's <LAzyLoadingStateCads />, which is imported like this:
+
+tsx
+Copy
+Edit
+const LAzyLoadingStateCads = lazy(() => import('./components/LazyLoading'));
+Because LAzyLoadingStateCads is lazy loaded, it won't be available immediately when the app renders.
+
+It's downloaded dynamically when needed (behind the scenes React uses dynamic import()).
+
+While React fetches and loads the LAzyLoadingStateCads file, the app needs to show something — otherwise, you'd have a blank page.
+
+The fallback prop of <Suspense> tells React:
+
+"While the component is loading, show this fallback UI."
+
+In our example, the fallback is:
+
+tsx
+Copy
+Edit
+<div style={{ textAlign: 'center' }}>Loading Cards...</div>
+So, while LAzyLoadingStateCads is loading, users see Loading Cards....
+
+Once it's fully loaded, React replaces the fallback with the real LAzyLoadingStateCads component.
+
+🧠 Why is Suspense Needed?
+
+Without Suspense	With Suspense
+React does not know how to handle a loading lazy component.	React waits for the lazy component to load, shows fallback UI, and then renders it.
+The app could crash or behave weirdly when the component isn’t ready.	The app stays smooth, showing a loading message (or spinner, etc.).
+✅ React rules:
+Whenever you use React.lazy(), you must wrap the lazy-loaded component inside a Suspense.
